@@ -1,0 +1,5 @@
+{
+  "name": "AquaMetaverse Identity Portal",
+  "description": "A banking-grade DeFi and GameFi dashboard for the AquaMetaverse. Manage identities via ENS subdomains on acquaflow0.eth and view treasury statistics.",
+  "requestFramePermissions": []
+}

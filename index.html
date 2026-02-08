@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AquaMetaverse | Banking Grade DeFi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@rainbow-me/rainbowkit@1.0.0/styles.css" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              aqua: {
+                50: '#f0fdfa',
+                100: '#ccfbf1',
+                200: '#99f6e4',
+                300: '#5eead4',
+                400: '#2dd4bf',
+                500: '#14b8a6',
+                600: '#0d9488',
+                700: '#0f766e',
+                800: '#115e59',
+                900: '#134e4a',
+                950: '#042f2e',
+              },
+              neon: {
+                blue: '#00f3ff',
+                purple: '#bc13fe',
+              }
+            },
+            backgroundImage: {
+              'ocean-gradient': 'linear-gradient(to bottom right, #0f172a, #1e3a8a, #042f2e)',
+              'glass': 'linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01))',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #020617; /* slate-950 */
+        color: white;
+      }
+      /* Custom scrollbar for banking grade feel */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0f172a; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1e293b; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #334155; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "wagmi/": "https://esm.sh/wagmi@^3.4.2/",
+    "wagmi": "https://esm.sh/wagmi@^3.4.2",
+    "@rainbow-me/rainbowkit": "https://esm.sh/@rainbow-me/rainbowkit@^2.2.10",
+    "@rainbow-me/rainbowkit/": "https://esm.sh/@rainbow-me/rainbowkit@^2.2.10/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

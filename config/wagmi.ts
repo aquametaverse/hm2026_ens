@@ -1,29 +1,17 @@
 import '@rainbow-me/rainbowkit/styles.css';
-import { getDefaultWallets } from '@rainbow-me/rainbowkit';
-import { configureChains, createConfig } from 'wagmi';
-import { sepolia, mainnet } from 'wagmi/chains';
-import { alchemyProvider } from 'wagmi/providers/alchemy';
-import { publicProvider } from 'wagmi/providers/public';
+import { getDefaultConfig } from '@rainbow-me/rainbowkit';
+import { mainnet, sepolia } from 'wagmi/chains';
+import { http } from 'wagmi';
 import { ALCHEMY_API_KEY, WALLET_CONNECT_PROJECT_ID } from '../constants';
 
-// Configure chains & providers with the Alchemy provider.
-// Two popular providers are Alchemy (alchemy.com) and Infura (infura.io)
-export const { chains, publicClient } = configureChains(
-  [mainnet, sepolia],
-  [
-    alchemyProvider({ apiKey: ALCHEMY_API_KEY }),
-    publicProvider()
-  ]
-);
+export const chains = [mainnet, sepolia] as const;
 
-const { connectors } = getDefaultWallets({
+export const wagmiConfig = getDefaultConfig({
   appName: 'AquaMetaverse',
   projectId: WALLET_CONNECT_PROJECT_ID,
-  chains
-});
-
-export const wagmiConfig = createConfig({
-  autoConnect: true,
-  connectors,
-  publicClient
+  chains,
+  transports: {
+    [mainnet.id]: http(`https://eth-mainnet.g.alchemy.com/v2/${ALCHEMY_API_KEY}`),
+    [sepolia.id]: http(`https://eth-sepolia.g.alchemy.com/v2/${ALCHEMY_API_KEY}`),
+  },
 });

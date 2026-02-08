@@ -4,9 +4,11 @@ export const WALLET_CONNECT_PROJECT_ID = process.env.NEXT_PUBLIC_WC_PROJECT_ID |
 
 // Contract Addresses (Sepolia Placeholders)
 export const AQUA_IDENTITY_NFT_ADDRESS = '0x1234567890123456789012345678901234567890';
-export const AQUA_FLOW_ENS_RESOLVER = '0x0987654321098765432109876543210987654321';
+export const SUBDOMAIN_REGISTRAR_ADDRESS = '0x1122334455667788990011223344556677889900'; // Replace with deployed SubdomainRegistrar
+export const AQUA_FLOW_ENS_RESOLVER = '0x0987654321098765432109876543210987654321'; // Public Resolver
 
 export const PARENT_DOMAIN = 'acquaflow0.eth';
+export const PARENT_LABEL = 'acquaflow0'; // The label part of the parent domain
 
 export const NAV_LINKS = [
   { name: 'Dashboard', path: '/' },
